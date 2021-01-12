@@ -3,7 +3,8 @@ import socket
 import requests
 os.system('clear')
 print('{clear window}')
-print('{import modul socket}')
+print('{import modul socket,requests,os}')
+print('{ver 12.01.21}')
 color_red='\033[31m'
 color_green='\033[32m'
 po='port '

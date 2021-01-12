@@ -1,7 +1,7 @@
 import os
 import socket
 import requests
-os.system('cls')
+os.system('clear')
 print('{clear window}')
 print('{import modul socket}')
 color_red='\033[31m'

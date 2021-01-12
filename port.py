@@ -6,7 +6,7 @@ from time import sleep
 os.system('clear')
 sleep(2)
 print('\033[31mавторы\n')
-a=('T', 'To', 'Top', 'Topo', 'Topo1', 'Topo1u', 'Topo1us', 'Topo1us-', 'Topo1us- -','Topo1us- - P','Topo1us- - P1','Topo1us- - P1a','Topo1us- - P1at','Topo1us- - P1ato','Topo1us- - P1aton')
+a=(' T', ' To', ' Top', ' Topo', ' Topo1', ' Topo1u', ' Topo1us', ' Topo1us-', ' Topo1us- -',' Topo1us- - P',' Topo1us- - P1',' Topo1us- - P1a',' Topo1us- - P1at',' Topo1us- - P1ato','  Topo1us- - P1aton')
 b=0
 while True:
     print(a[b % len(a)], sep='', end='\r')

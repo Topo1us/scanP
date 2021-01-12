@@ -1,9 +1,19 @@
 import os
 import socket
 import requests
+import time
+time.sleep(2)
+print('\033[31авторы\n')
+a=('T', 'To', 'Top', 'Topo', 'Topo1', 'Topo1u', 'Topo1us', 'Topo1us-', 'Topo1us- -','Topo1us- - P','Topo1us- - P1','Topo1us- - P1a','Topo1us- - P1at','Topo1us- - P1ato','Topo1us- - P1aton')
+b=0
+while True:
+    print(colored(a[b % len(a)], 'red'), sep='', end='\r')
+    sleep(0.1)
+    b+=1
+    if b>15:
+        print('')
+        break
 os.system('clear')
-print('{очистил экран}')
-print('{импорт модулей socket,requests,os}')
 print('{версия 12.01.21}')
 color_red='\033[31m'
 color_green='\033[32m'

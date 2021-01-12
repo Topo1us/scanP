@@ -2,6 +2,7 @@ import os
 import socket
 import requests
 import time
+from time import sleep
 sleep(2)
 print('\033[31авторы\n')
 a=('T', 'To', 'Top', 'Topo', 'Topo1', 'Topo1u', 'Topo1us', 'Topo1us-', 'Topo1us- -','Topo1us- - P','Topo1us- - P1','Topo1us- - P1a','Topo1us- - P1at','Topo1us- - P1ato','Topo1us- - P1aton')

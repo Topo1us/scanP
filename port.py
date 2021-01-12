@@ -3,6 +3,7 @@ import socket
 import requests
 import time
 from time import sleep
+os.system('clear')
 sleep(2)
 print('\033[31авторы\n')
 a=('T', 'To', 'Top', 'Topo', 'Topo1', 'Topo1u', 'Topo1us', 'Topo1us-', 'Topo1us- -','Topo1us- - P','Topo1us- - P1','Topo1us- - P1a','Topo1us- - P1at','Topo1us- - P1ato','Topo1us- - P1aton')
@@ -14,7 +15,6 @@ while True:
     if b>15:
         print('')
         break
-os.system('clear')
 print('{версия 12.01.21}')
 color_red='\033[31m'
 color_green='\033[32m'

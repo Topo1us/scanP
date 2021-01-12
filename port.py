@@ -7,7 +7,7 @@ print('\033[31авторы\n')
 a=('T', 'To', 'Top', 'Topo', 'Topo1', 'Topo1u', 'Topo1us', 'Topo1us-', 'Topo1us- -','Topo1us- - P','Topo1us- - P1','Topo1us- - P1a','Topo1us- - P1at','Topo1us- - P1ato','Topo1us- - P1aton')
 b=0
 while True:
-    print(colored(a[b % len(a)], 'red'), sep='', end='\r')
+    print(a[b % len(a)], sep='', end='\r')
     sleep(0.1)
     b+=1
     if b>15:

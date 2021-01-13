@@ -60,7 +60,6 @@ def openports(ip):
             sock.settimeout(0.3)
             sock.connect((ip, port))
             print('\033[32mпорт:: %s' % port, ':: открыт',color_white)
-            fg()
             port_open+=1
             op.append(port)
             sock.close()

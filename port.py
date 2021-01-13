@@ -10,7 +10,7 @@ color_white='\033[37m'
 color_fial='\033[35m'
 sleep(2)
 print('\033[33mавторы\n',color_red)
-a=(' T', ' To', ' Top', ' Topo', ' Topo1', ' Topo1u', ' Topo1us', ' Topo1us-', ' Topo1us - -',' Topo1us - - P',' Topo1us - - P1',' Topo1us - - P1a',' Topo1us - - P1at',' Topo1us - - P1ato',' Topo1us - - P1aton')
+a=(' T', ' To', ' Top', ' Topo', ' Topo1', ' Topo1u', ' Topo1us', ' Topo1us -', ' Topo1us - -',' Topo1us - - P',' Topo1us - - P1',' Topo1us - - P1a',' Topo1us - - P1at',' Topo1us - - P1ato',' Topo1us - - P1aton')
 b=0
 while True:
     print(a[b % len(a)], sep='', end='\r')
@@ -68,9 +68,7 @@ def openports(ip):
             port_close+=1
             ops.append(port)
     print(color_red+'закрытые порты '+str(port_close))
-    print(color_green+'закрытые порт ',op)
-    if 80 not in op:
-        print('\033[33m\nдля IP::',ip,'не открыт порт 80.\nсоветую перепроверить',color_white)
+    print(color_green+'открытые порты ',op)
 def openports2():
     ip=input('IP: ')
     port=int(input('PORT: '))

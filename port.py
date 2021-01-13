@@ -19,7 +19,7 @@ while True:
     if b>15:
         print('')
         break
-print(color_fial,'\n{версия 12.01.21}',color_white)
+print(color_fial,'\n{версия 13.01.21}',color_white)
 po='порт '
 cl=color_red+' закрыт'
 b=0

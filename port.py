@@ -4,9 +4,13 @@ import requests
 import time
 from time import sleep
 os.system('clear')
+color_red='\033[31m'
+color_green='\033[32m'
+color_white='\033[37m'
+color_fial='\033[35m'
 sleep(2)
-print('\033[31mавторы\n')
-a=(' T', ' To', ' Top', ' Topo', ' Topo1', ' Topo1u', ' Topo1us', ' Topo1us-', ' Topo1us- -',' Topo1us- - P',' Topo1us- - P1',' Topo1us- - P1a',' Topo1us- - P1at',' Topo1us- - P1ato','  Topo1us- - P1aton')
+print('\033[33mавторы\n',color_red)
+a=(' T', ' To', ' Top', ' Topo', ' Topo1', ' Topo1u', ' Topo1us', ' Topo1us-', ' Topo1us - -',' Topo1us - - P',' Topo1us - - P1',' Topo1us - - P1a',' Topo1us - - P1at',' Topo1us - - P1ato',' Topo1us - - P1aton')
 b=0
 while True:
     print(a[b % len(a)], sep='', end='\r')
@@ -15,18 +19,28 @@ while True:
     if b>15:
         print('')
         break
-print('{версия 12.01.21}')
-color_red='\033[31m'
-color_green='\033[32m'
+print(color_fial,'\n{версия 12.01.21}',color_white)
 po='порт '
 cl=color_red+' закрыт'
 b=0
 nm=0
 try:
     requests.get("https://google.com", timeout=4)
-    print('интернет подключен')
+    print(color_green,'\nинтернет подключен',color_white)
 except:
-    print('интернет отсутствует')
+    print(color_red,'\nинтернет отсутствует',color_white)
+def fg():
+    l=['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15']
+    b=0
+    while True:
+        print(l[b % len(l)], sep='', end='\r')
+        sleep(0.1)
+        b+=1
+        if b>15:
+            print('')
+            break
+    
+    
 fg=[21, 22, 23, 25,31,41, 43, 45, 53,59, 68, 79, 80, 99, 110, 113, 115, 119, 121, 123, 135, 139, 143, 161, 179, 220, 389, 421, 443, 445, 456, 531, 555, 666, 911,
                          993, 999, 1001, 1010, 1011,1012,1015,1024,1024,1042,1045,1090,1170,1243,1245,1269,1492,1509,1600, 1723,1807,1981,1999,2023,2115, 2140, 2155, 2283, 2600, 2801, 3024,
                          2049, 3128, 3129, 3150, 3459, 3700, 3791, 4092, 3459, 3700, 3791,3306, 3389, 4321, 4567, 4590, 5000, 5001, 5011, 5031, 5321, 5400, 5401, 5550, 5555, 5556, 5060, 8080,
@@ -45,17 +59,18 @@ def openports(ip):
             sock = socket.socket()
             sock.settimeout(0.3)
             sock.connect((ip, port))
-            print('\033[32mport:: %s' % port, ':: открыт')
+            print('\033[32mпорт:: %s' % port, ':: открыт',color_white)
+            fg()
             port_open+=1
             op.append(port)
             sock.close()
         except:
             port_close+=1
             ops.append(port)
-    print(color_red+'close ports '+str(port_close))
-    print(color_green+'open ports ',op)
+    print(color_red+'закрытые порты '+str(port_close))
+    print(color_green+'закрытые порт ',op)
     if 80 not in op:
-        print('\033[33mдля IP::',ip,'не открыт порт 80.\nсоветую перепроверить')
+        print('\033[33m\nдля IP::',ip,'не открыт порт 80.\nсоветую перепроверить',color_white)
 def openports2():
     ip=input('IP: ')
     port=int(input('PORT: '))
@@ -64,11 +79,11 @@ def openports2():
             sock = socket.socket()
             sock.settimeout(0.2)
             sock.connect((ip, lol))
-            print('\033[32mпорт:: %s' % lol, ':: открыт')
+            print('\033[32mпорт:: %s' % lol, ':: открыт',color_white)
             sock.close()
         except:
-            print('\033[31mпортt:: %s' % lol, ':: закрыт')
-            print('\033[32mготово')
+            print('\033[31mпортt:: %s' % lol, ':: закрыт',color_white)
+            print('\033[32mготово',color_white)
 print('''
 [1] сканирование стандартных портов
 [2] сканирование определенного порта 
@@ -83,4 +98,4 @@ while True:
         openports2()
         break
     else:
-        print('error 404.')
+        print(color_red,'error 404.',color_white)
